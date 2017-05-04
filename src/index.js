@@ -4,9 +4,6 @@ import {Provider} from 'react-redux';
 import {AppRegistry } from 'react-native';
 import AppNavigator from './react/navigators/AppNavigator.js';
 
-// launch init script
-import init from './logic/init';
-
 // merging Redux store & App
 export default class navnativebase extends React.Component {
     render() {

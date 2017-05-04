@@ -8,7 +8,6 @@
     "flow": "node_modules/.bin/flow status"
   },
   "dependencies": {
-    "immutable": "^3.8.1",
     "lodash": "^4.17.4",
     "react": "16.0.0-alpha.6",
     "react-native": "0.43.3",
