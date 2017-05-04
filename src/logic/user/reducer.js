@@ -1,4 +1,5 @@
 // reducer for friends
+// @flow
 import {
     USER_RECEIVE,
     USER_LOGOUT,
@@ -8,8 +9,11 @@ import {
     USER_ERROR,
     USER_SET_IMAGE} from './actions';
 import initialState from './initialState';
+import type {UserStateType} from './flow';
 
-export default reducer = (state = initialState, action) => {
+// TODO : import ActionType
+
+export default (state:UserStateType = initialState, action:Object):UserStateType => {
 
     switch (action.type){
 

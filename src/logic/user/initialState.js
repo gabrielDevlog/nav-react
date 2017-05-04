@@ -1,5 +1,9 @@
 // initial state && objects formats
+// @flow
 
+// TODO : import UserStateType
+
+// default values
 export default {
 
     /**
@@ -7,7 +11,7 @@ export default {
      * @type {Object}
      */
     user: {
-        email:"",
+        email: "",
         fbid: 0,
         iduser: 0,
         picture: "",
@@ -15,7 +19,7 @@ export default {
         rang: "",
         token_connection: "",
         token_session: "",
-        url: ""
+        url: "",
     },
 
     /**
@@ -40,4 +44,3 @@ export default {
     image: '',
 
 };
-
