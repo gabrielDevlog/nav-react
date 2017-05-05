@@ -3,11 +3,6 @@
     @flow
  */
 
-// flow type for actions
-export type ActionType = {
-    type: string,
-};
-
 // flow type for user data
 export type UserDataType = {
     email: string,
@@ -42,19 +37,34 @@ export type UserStateType = {
      * to know if state is waiting for data
      * @type Boolean
      */
-        isFetching: UserIsFetchingType,
+    isFetching: UserIsFetchingType,
 
     /**
      * error data
      * @type {Object}
      */
-        error: UserErrorType,
+    error: UserErrorType,
 
     /**
      * avatar url
      * @type {String}
      */
-        image: UserImageType,
+    image: UserImageType,
 
 };
 
+
+// flow type for actions
+export type ActionType = {
+    type: string,
+    user?: UserDataType,
+    isFetching?: UserIsFetchingType,
+    error?: UserErrorType,
+    state?: UserStateType,
+    image?: UserImageType,
+    email?: string,
+    pwd?: string,
+    success?:any,
+    data?: Object,
+
+};

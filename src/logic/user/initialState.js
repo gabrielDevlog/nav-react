@@ -1,10 +1,10 @@
 // initial state && objects formats
 // @flow
 
-// TODO : import UserStateType
+import type {UserStateType} from './flow';
 
 // default values
-export default {
+const initialState: UserStateType = {
 
     /**
      * user data
@@ -44,3 +44,6 @@ export default {
     image: '',
 
 };
+
+// export to default
+export default initialState;

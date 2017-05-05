@@ -31,6 +31,9 @@ export default {
                     throw Error(response.answer_code);
                 }
 
+                // transform id_user key to expected iduser key
+                response.answer_data.iduser = response.answer_data.id_user;
+
                 // return data
                 return response.answer_data;
             });
@@ -67,6 +70,9 @@ export default {
 
             // utilisateur connecté correctement
             if( "validateFbLogin_end_code_0" == reponse_code) {
+
+                // transform id_user key to expected iduser key
+                response.answer_data.iduser = response.answer_data.id_user;
 
                 // promesse résolue
                 return reponse_data;

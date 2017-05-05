@@ -9,11 +9,11 @@ import {
     USER_ERROR,
     USER_SET_IMAGE} from './actions';
 import initialState from './initialState';
+
 import type {UserStateType} from './flow';
+import type {ActionType} from './flow';
 
-// TODO : import ActionType
-
-export default (state:UserStateType = initialState, action:Object):UserStateType => {
+export default (state:UserStateType = initialState, action:ActionType):UserStateType => {
 
     switch (action.type){
 
@@ -21,7 +21,6 @@ export default (state:UserStateType = initialState, action:Object):UserStateType
             return Object.assign({}, state, {
                 user: {
                     ...action.user,
-                    iduser: action.user.id_user,
                 }
             });
 
@@ -41,12 +40,7 @@ export default (state:UserStateType = initialState, action:Object):UserStateType
             return Object.assign({}, state, {isFetching: action.isFetching});
 
         case USER_ERROR:
-            return Object.assign({}, state, {
-                error: {
-                    show: true,
-                    msg: action.msg,
-                }
-            });
+            return Object.assign({}, state, {...action.error} );
 
         default:
             return state;
