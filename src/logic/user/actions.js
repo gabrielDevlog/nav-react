@@ -1,5 +1,6 @@
 // friends actions
 // @flow
+
 import type {
     UserDataType,
     UserErrorType,
@@ -29,8 +30,8 @@ export const isFetching = (isFetching:UserIsFetchingType) => {
 
 // set error msg
 export const USER_ERROR = 'USER_ERROR';
-export const error = (msg: string) => {
-    return{ type:USER_ERROR, msg};
+export const error = (error: UserErrorType) => {
+    return{ type:USER_ERROR, error};
 };
 
 // loaded from cache
